@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Table template</title>
+  <title>Planets Data</title>
   <link href="minimal-table.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -12,56 +12,69 @@
   <h1>Planets data</h1>
 
   <table>
-    <tr>
-      <th>
-        </td>
-      <th>Name</td>
-      <th>Mass (10<sup>24</sup>kg)</td>
-      <th>Diameter (km)</td>
-      <th>Density (kg/m<sup>3</sup>)</td>
-      <th>Gravity (m/s<sup>2</sup>)</td>
-      <th>Length of day (hours)</td>
-      <th>Distance from Sun (10<sup>6</sup>km)</td>
-      <th>Mean temperature (°C)</td>
-      <th>Number of moons</td>
-      <th>Notes</td>
-    </tr>
+    <colgroup>
+      <col span="2">
+      <col style="border: 2px solid black;">
+    </colgroup>
+    <caption>Data about the planets of our solar system (Planetary facts taken from <a
+        href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).</caption>
+    <thead>
+      <tr>
+        <th colspan="2">
+          </td>
+        <th>Name</th>
+        <th>Mass (10<sup>24</sup>kg)</th>
+        <th>Diameter (km)</th>
+        <th>Density (kg/m<sup>3</sup>)</th>
+        <th>Gravity (m/s<sup>2</sup>)</th>
+        <th>Length of day (hours)</th>
+        <th>Distance from Sun (10<sup>6</sup>km)</th>
+        <th>Mean temperature (°C)</th>
+        <th>Number of moons</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td colspan="2" rowspan="4">Terrestrialplanets</td>
+        <td>Mercury</td>
+      </tr>
 
-    <tr></tr>
-    <tr>
-      <td>Terrestrialplanets</td>
-      <td>Mercury</td>
-    </tr>
+      <tr>
+        <td>Venus</td>
 
-    <tr>
-      <td>Venus</td>
+      </tr>
+      <tr>
+        <td>Earth</td>
+      </tr>
+      <tr>
+        <td>Mars</td>
+      </tr>
 
-    </tr>
-    <tr>
-      <td>Earth</td>
-    </tr>
-    <tr>
-      <td>Mars</td>
-    </tr>
-    
-    <tr>
-      <td>Jovian planets</td>
-      <td>Gas giants</td>
-      <td>Jupiter</td>
-      <td>Saturn</td>
-    </tr>
+      <tr>
+        <td rowspan="4">Jovian planets</td>
+        <td rowspan="2">Gas giants</td>
+        <td>Jupiter</td>
+      </tr>
+      <tr>
+        <td>Saturn</td>
 
-    <tr>
-      <td>Ice giants</td>
-      <td>Uranus</td>
-      <td>Neptune</td>
-    </tr>
+      </tr>
 
-    <tr>
-      <td>Dwarf planets</td>
-      <td>Pluto</td>
-    </tr>
+      <tr>
+        <td rowspan="2">Ice giants</td>
+        <td>Uranus</td>
+      </tr>
+      <tr>
+        <td>Neptune</td>
 
+      </tr>
+
+      <tr>
+        <td colspan="2" rowspan="2">Dwarf planets</td>
+        <td>Pluto</td>
+      </tr>
+    </tbody>
   </table>
 </body>
 
