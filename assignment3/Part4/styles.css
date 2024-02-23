@@ -52,7 +52,7 @@ body {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1px;
   }
 
@@ -61,9 +61,14 @@ body {
   }
 
   article {
-    flex: 1
+    flex: 1;
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
 
   aside {
     flex: 1
   }
+
+  
