@@ -9,5 +9,9 @@ html {
   height: 200px;
   line-height: 200px;
   text-align: center;
-  
+  font-size: 1.094rem;
+  /* I used a converter and inputed 17.5 */
+  background-color: red;
+  color: white;
+  text-shadow: 1px 1px 5px black;
 }
