@@ -6,12 +6,17 @@ html {
 
 .box{
   width: 200px;
-  height: 200px;
-  line-height: 200px;
+  height: 155px;
+  line-height: 155px;
   text-align: center;
   font-size: 1.094rem;
   /* I used a converter and inputed 17.5 */
   background-color: red;
   color: white;
   text-shadow: 1px 1px 5px black;
+  border-radius: 15px;
+  border: 1px solid #a00000;
+  box-shadow: 3px 3px 6px black, inset 2px 2px 2px rgba(255, 255, 255, 0.5), inset -2px -2px 2px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 30%, rgba(0, 0, 0, 0.25) 100%), red;
+  
 }
