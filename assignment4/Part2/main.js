@@ -10,7 +10,7 @@ const imageArray =['pic1.jpg', 'pic2.jpg','pic3.jpg', 'pic4.jpg','pic4.jpg'];
 const altText = ['A Beautiful Landscape', 'A Beautiful Landscape', 'A Beautiful Landscape', 'A Beautiful Landscape', 'A Beautiful Landscape'];
 /* Looping through images */
 
-for (let i = 0; i , imageArray.length; i++) {
+for (let i = 0; i < imageArray.length; i++) {
     const newImage = document.createElement('img');
     newImage.setAttribute('src', 'images/' + imageArray[i]);
     newImage.setAttribute('alt', altText[i]);
@@ -21,3 +21,12 @@ for (let i = 0; i , imageArray.length; i++) {
 }
 
 /* Wiring up the Darken/Lighten button */
+
+btn.addEventListener('click', () => {
+    const btnClass = btn.getAttribute('class');
+    if (btnClass === 'dark') {
+
+    } else {
+
+    }
+});
