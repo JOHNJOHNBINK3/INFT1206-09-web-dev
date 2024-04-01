@@ -1,5 +1,8 @@
 // set up canvas
 
+const counter = document.querySelector('p');
+let count = 0;
+
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
 
@@ -24,6 +27,8 @@ class Shape {
     this.y = y;
     this.velX = velX;
     this.velY = velY;
+  }
+}
 
 class Ball extends Shape {
   constructor(x, y, velX, velY, color, size) {
@@ -67,18 +72,18 @@ class Ball extends Shape {
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-  
+
         if (distance < this.size + ball.size) {
           ball.color = this.color = randomRGB();
         }
       }
     }
-  }  
+  }
 }
 
 class EvilCircle extends Shape {
-  constructor(x,y){
-    super(x,y,20,20)
+  constructor(x, y) {
+    super(x, y, 20, 20)
     this.color = "white";
     this.size = 10;
 
@@ -98,7 +103,7 @@ class EvilCircle extends Shape {
           break;
       }
     });
-    
+
   }
 
   draw() {
@@ -134,16 +139,16 @@ class EvilCircle extends Shape {
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
-  
+
         if (distance < this.size + ball.size) {
           ball.exists = false;
           count--;
-          parseFloat.textContent = 'Ball count ' + count;
+          counter.textContent = 'Ball count ' + count;
         }
       }
     }
-  }  
-  
+  }
+
 }
 
 const balls = [];
@@ -160,9 +165,13 @@ while (balls.length < 25) {
     randomRGB(),
     size
   );
-
   balls.push(ball);
+  count++;
+  counter.textContent = 'Ball count: ' + count;
+
 }
+
+const evilBall = new EvilCircle(random(0, width), random(0, height));
 
 function loop() {
   ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
@@ -170,13 +179,18 @@ function loop() {
 
   for (const ball of balls) {
     if (ball.exists) {
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
+      ball.draw();
+      ball.update();
+      ball.collisionDetect();
     }
   }
 
+  evilBall.draw();
+  evilBall.checkBounds();
+  evilBall.collisionDetect();
+
   requestAnimationFrame(loop);
 }
+
 
 loop();
